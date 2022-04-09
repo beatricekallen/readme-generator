@@ -2,7 +2,8 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
-const { rejects } = require("assert");
+const path = require("path");
+// const { rejects } = require("assert");
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -94,15 +95,14 @@ const questions = [
     message:
       "What license would you like to publish your project under? (Required)",
     choices: [
-      "Apache License 2.0",
-      "BSD 3-Clause 'New' or 'Revised' license",
-      "BSD 2-Clause 'Simplified' or 'FreeBSD' license",
-      "GNU General Public License (GPL)",
-      "GNU Library or 'Lesser' General Public License (LGPL)",
-      "MIT license",
-      "Mozilla Public License 2.0",
-      "Common Development and Distribution License",
-      "Eclipse Public License version 2.0",
+      "Apache_2.0",
+      "BSD_3--Clause",
+      "BSD_2--Clause",
+      "GPLv3",
+      "LGPL_v3",
+      "MIT",
+      "MPL_2.0",
+      "EPL_1.0",
     ],
     validate: (licenseInput) => {
       if (licenseInput) {
@@ -143,14 +143,19 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  if (err) {
-    rejects(err);
-    return;
-  }
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+  // if (err) {
+  //   rejects(err);
+  //   return;
+  // }
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer.prompt(questions).then((userInput) => {
+    writeToFile("readme.md", generateMarkdown({ ...userInput }));
+  });
+}
 
 // Function call to initialize app
 init();
