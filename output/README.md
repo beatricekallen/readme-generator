@@ -1,9 +1,9 @@
-# a
+# ReadMe Generator
 
-  ![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+  ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
   ## Description
-  e
+  This program generates a high-quality ReadMe based on industry best practices with Node.js.
 
 ## Table of Contents
 1. [ Installation ](#installation)
@@ -15,24 +15,24 @@
 
   <a name="installation"></a>
   ## Installation
-  a
+  Install.
 
   <a name="usage"></a>
   ## Usage
-  t
+  Use.
 
   <a name="license"></a>
   ## License
-  This project is licensed under the Apache_2.0 license. More information can be found at https://opensource.org/licenses/Apache-2.0.
+  This project is licensed under the MIT license. More information can be found at https://opensource.org/licenses/MIT.
 
   <a name="contributing"></a>
   ## Contributing
-  r
+  Jane Doe, John Doe, Beatrice Allen
 
   <a name="tests"></a>
   ## Tests
-  i
+  Test. 
 
   <a name="questions"></a>
   ## Questions
-  This project, as well as my other projects, can be viewed on my GitHub profile, available at https://github.com/c. If you have any questions for me, please feel free to email me at e.
+  This project, as well as my other projects, can be viewed on my GitHub profile, available at https://github.com/beatricekallen. If you have any questions for me, please feel free to email me at bkallen90@gmail.com.
